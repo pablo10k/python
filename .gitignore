@@ -1,4 +1,7 @@
 *env/
-*requirements.txt
 *.vscode
 *.jpg
+*/env
+*venv
+*lib
+*app.yaml
