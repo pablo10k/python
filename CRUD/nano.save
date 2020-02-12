@@ -1,0 +1,52 @@
+import turtle
+
+myPen = turtle.Turtle()
+myPen.speed(0)
+myPen.color("#3498eb")
+myPen.pensize(2)
+myPen.penup()
+myPen.goto(0,0)
+myPen.pendown()
+
+deftriangle(side, increment, iteration):
+
+    myPen.left(180)
+    myPen.forward(side)
+    count = 0
+    while count < iteration:
+        side += increment
+        myPen.right(120)
+        myPen.forward(side)
+        count += 1
+
+definclinedTriangle(side, decrement, iteration):
+    
+    myPen.left(210)
+    myPen.forward(side)
+    count = 1
+    while count < iteration:
+        side -= decrement
+        myPen.right(123)
+        myPen.forward(side)
+        count += 1
+
+defcircles(iteration, size, angle, recurse):
+
+    count = 1
+    while count < iteration:
+        myPen.forward(size)
+        myPen.right(angle)
+        count += 1
+    myPen.penup()
+    myPen.goto(0,0)
+    myPen.pendown()
+    if0 < recurse :
+        recurse -= 1
+        circles(iteration, size, angle, recurse)
+
+# triangle(20, 10, 50)
+# inclinedTriangle(300, 3, 94)
+# inclinedTriangle(300, 0, 80)
+circles(24, 26, 15, 30)
+
+turtle.done()
